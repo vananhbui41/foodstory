@@ -21,5 +21,16 @@
   <% end %>
 </p>
 
+<h2>Comment</h2>
+<%= form_with(model: @post_comment, local: true) do |form| %>
+  <div class= "field">
+    <%= form.text_area :comment %>
+    <%= form.hidden_field :post_id, :value => @post.id %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
