@@ -1,4 +1,14 @@
 <h1>プロフィール</h1>
 
+<h3>名前</h3>
+<%= @user.name %>
+
+<h3>年齢</h3>
+<%= @user.age %>
+
 <h3>メールアドレス</h3>
 <%= @user.email %>
+
+<div>
+<button type="button" class="btn btn-warning"><%= link_to "Edit",edit_user_registration_path %></button>
+</div>
