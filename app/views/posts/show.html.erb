@@ -34,8 +34,10 @@
 
 <ul>
     <% @post.post_comment.each do |post_comment|%>
-    <li><%= post_comment.comment %></li>
-        (<i><%= post_comment.user_id %></i>)
+    <li>
+    (<i><%= post_comment.user.name if post_comment.user %></i>)
+    <%= post_comment.comment %></li>
+        
     <% end %>
 </ul>
 
